@@ -1,0 +1,11 @@
+build/
+*.xcuserdata/
+xcuserdata/
+DerivedData/
+*.xcworkspace/xcuserdata/
+.DS_Store
+.vscode/
+
+# macOS 截屏
+截屏*.png
+Screen Shot*.png

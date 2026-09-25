@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76AC00093005051500443404 /* TokenHamsterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 76ACFFFA3005051300443404 /* TokenHamsterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		76ACFFFB3005051300443404 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ACFFB03005042100443404 /* WidgetKit.framework */; };
+		76ACFFFC3005051300443404 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ACFFB23005042100443404 /* SwiftUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7682CED03005015C00957FA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7682CEBA3005015A00957FA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7682CEC13005015A00957FA2;
+			remoteInfo = TokenHamster;
+		};
+		7682CEDA3005015C00957FA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7682CEBA3005015A00957FA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7682CEC13005015A00957FA2;
+			remoteInfo = TokenHamster;
+		};
+		76AC00073005051500443404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7682CEBA3005015A00957FA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76ACFFF93005051300443404;
+			remoteInfo = TokenHamsterWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76ACFFC13005042300443404 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				76AC00093005051500443404 /* TokenHamsterWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7682CEC23005015A00957FA2 /* TokenHamster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenHamster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7682CECF3005015C00957FA2 /* TokenHamsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokenHamsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7682CED93005015C00957FA2 /* TokenHamsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokenHamsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76ACFFB03005042100443404 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		76ACFFB23005042100443404 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		76ACFFFA3005051300443404 /* TokenHamsterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TokenHamsterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		76AC000A3005051500443404 /* Exceptions for "TokenHamsterWidget" folder in "TokenHamsterWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 76ACFFF93005051300443404 /* TokenHamsterWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7682CEC43005015A00957FA2 /* TokenHamster */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TokenHamster;
+			sourceTree = "<group>";
+		};
+		7682CED23005015C00957FA2 /* TokenHamsterTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TokenHamsterTests;
+			sourceTree = "<group>";
+		};
+		7682CEDC3005015C00957FA2 /* TokenHamsterUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TokenHamsterUITests;
+			sourceTree = "<group>";
+		};
+		76ACFFFD3005051300443404 /* TokenHamsterWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				76AC000A3005051500443404 /* Exceptions for "TokenHamsterWidget" folder in "TokenHamsterWidgetExtension" target */,
+			);
+			path = TokenHamsterWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7682CEBF3005015A00957FA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7682CECC3005015C00957FA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7682CED63005015C00957FA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ACFFF73005051300443404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76ACFFFC3005051300443404 /* SwiftUI.framework in Frameworks */,
+				76ACFFFB3005051300443404 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7682CEB93005015A00957FA2 = {
+			isa = PBXGroup;
+			children = (
+				7682CEC43005015A00957FA2 /* TokenHamster */,
+				7682CED23005015C00957FA2 /* TokenHamsterTests */,
+				7682CEDC3005015C00957FA2 /* TokenHamsterUITests */,
+				76ACFFFD3005051300443404 /* TokenHamsterWidget */,
+				76ACFFAF3005042100443404 /* Frameworks */,
+				7682CEC33005015A00957FA2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7682CEC33005015A00957FA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7682CEC23005015A00957FA2 /* TokenHamster.app */,
+				7682CECF3005015C00957FA2 /* TokenHamsterTests.xctest */,
+				7682CED93005015C00957FA2 /* TokenHamsterUITests.xctest */,
+				76ACFFFA3005051300443404 /* TokenHamsterWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76ACFFAF3005042100443404 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76ACFFB03005042100443404 /* WidgetKit.framework */,
+				76ACFFB23005042100443404 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7682CEC13005015A00957FA2 /* TokenHamster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7682CEE33005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamster" */;
+			buildPhases = (
+				7682CEBE3005015A00957FA2 /* Sources */,
+				7682CEBF3005015A00957FA2 /* Frameworks */,
+				7682CEC03005015A00957FA2 /* Resources */,
+				76ACFFC13005042300443404 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76AC00083005051500443404 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7682CEC43005015A00957FA2 /* TokenHamster */,
+			);
+			name = TokenHamster;
+			packageProductDependencies = (
+			);
+			productName = TokenHamster;
+			productReference = 7682CEC23005015A00957FA2 /* TokenHamster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7682CECE3005015C00957FA2 /* TokenHamsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7682CEE63005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamsterTests" */;
+			buildPhases = (
+				7682CECB3005015C00957FA2 /* Sources */,
+				7682CECC3005015C00957FA2 /* Frameworks */,
+				7682CECD3005015C00957FA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7682CED13005015C00957FA2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7682CED23005015C00957FA2 /* TokenHamsterTests */,
+			);
+			name = TokenHamsterTests;
+			packageProductDependencies = (
+			);
+			productName = TokenHamsterTests;
+			productReference = 7682CECF3005015C00957FA2 /* TokenHamsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7682CED83005015C00957FA2 /* TokenHamsterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7682CEE93005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamsterUITests" */;
+			buildPhases = (
+				7682CED53005015C00957FA2 /* Sources */,
+				7682CED63005015C00957FA2 /* Frameworks */,
+				7682CED73005015C00957FA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7682CEDB3005015C00957FA2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7682CEDC3005015C00957FA2 /* TokenHamsterUITests */,
+			);
+			name = TokenHamsterUITests;
+			packageProductDependencies = (
+			);
+			productName = TokenHamsterUITests;
+			productReference = 7682CED93005015C00957FA2 /* TokenHamsterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		76ACFFF93005051300443404 /* TokenHamsterWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76AC000B3005051500443404 /* Build configuration list for PBXNativeTarget "TokenHamsterWidgetExtension" */;
+			buildPhases = (
+				76ACFFF63005051300443404 /* Sources */,
+				76ACFFF73005051300443404 /* Frameworks */,
+				76ACFFF83005051300443404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				76ACFFFD3005051300443404 /* TokenHamsterWidget */,
+			);
+			name = TokenHamsterWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TokenHamsterWidgetExtension;
+			productReference = 76ACFFFA3005051300443404 /* TokenHamsterWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7682CEBA3005015A00957FA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					7682CEC13005015A00957FA2 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					7682CECE3005015C00957FA2 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 7682CEC13005015A00957FA2;
+					};
+					7682CED83005015C00957FA2 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 7682CEC13005015A00957FA2;
+					};
+					76ACFFF93005051300443404 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 7682CEBD3005015A00957FA2 /* Build configuration list for PBXProject "TokenHamster" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7682CEB93005015A00957FA2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7682CEC33005015A00957FA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7682CEC13005015A00957FA2 /* TokenHamster */,
+				7682CECE3005015C00957FA2 /* TokenHamsterTests */,
+				7682CED83005015C00957FA2 /* TokenHamsterUITests */,
+				76ACFFF93005051300443404 /* TokenHamsterWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7682CEC03005015A00957FA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7682CECD3005015C00957FA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7682CED73005015C00957FA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ACFFF83005051300443404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7682CEBE3005015A00957FA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7682CECB3005015C00957FA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7682CED53005015C00957FA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76ACFFF63005051300443404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7682CED13005015C00957FA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7682CEC13005015A00957FA2 /* TokenHamster */;
+			targetProxy = 7682CED03005015C00957FA2 /* PBXContainerItemProxy */;
+		};
+		7682CEDB3005015C00957FA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7682CEC13005015A00957FA2 /* TokenHamster */;
+			targetProxy = 7682CEDA3005015C00957FA2 /* PBXContainerItemProxy */;
+		};
+		76AC00083005051500443404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76ACFFF93005051300443404 /* TokenHamsterWidgetExtension */;
+			targetProxy = 76AC00073005051500443404 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7682CEE13005015C00957FA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7682CEE23005015C00957FA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		7682CEE43005015C00957FA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TokenHamster/TokenHamster.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7682CEE53005015C00957FA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TokenHamster/TokenHamster.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7682CEE73005015C00957FA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TokenHamster.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TokenHamster";
+			};
+			name = Debug;
+		};
+		7682CEE83005015C00957FA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TokenHamster.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TokenHamster";
+			};
+			name = Release;
+		};
+		7682CEEA3005015C00957FA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamsterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TokenHamster;
+			};
+			name = Debug;
+		};
+		7682CEEB3005015C00957FA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamsterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TokenHamster;
+			};
+			name = Release;
+		};
+		76AC000C3005051500443404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TokenHamsterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TokenHamsterWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamster.TokenHamsterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		76AC000D3005051500443404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJJC82CK65;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TokenHamsterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TokenHamsterWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamster.TokenHamsterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7682CEBD3005015A00957FA2 /* Build configuration list for PBXProject "TokenHamster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7682CEE13005015C00957FA2 /* Debug */,
+				7682CEE23005015C00957FA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7682CEE33005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7682CEE43005015C00957FA2 /* Debug */,
+				7682CEE53005015C00957FA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7682CEE63005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7682CEE73005015C00957FA2 /* Debug */,
+				7682CEE83005015C00957FA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7682CEE93005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamsterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7682CEEA3005015C00957FA2 /* Debug */,
+				7682CEEB3005015C00957FA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76AC000B3005051500443404 /* Build configuration list for PBXNativeTarget "TokenHamsterWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76AC000C3005051500443404 /* Debug */,
+				76AC000D3005051500443404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7682CEBA3005015A00957FA2 /* Project object */;
+}
