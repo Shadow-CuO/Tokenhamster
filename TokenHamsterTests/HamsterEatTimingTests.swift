@@ -5,7 +5,7 @@
 //  eat（嗑瓜子）帧序列与时长验收
 //  期望序列：eat_1 → 2 3 2 3 4 5 4 5 → eat_6
 //    eat_1      : 0.5~0.8s（起势）
-//    eat_2..5   : 0.05~0.1s（高频咀嚼）
+//    eat_2..5   : 0.08~0.15s（咀嚼，逐帧加速）
 //    eat_6      : 0.5~0.8s（收势）
 //
 
@@ -28,13 +28,13 @@ struct HamsterEatTimingTests {
         ])
     }
 
-    /// 咀嚼帧（第 2~9 帧）必须落在 0.05~0.1s —— 这是"快速咀嚼"的硬指标
-    @Test func chewFramesAreFast() {
+    /// 咀嚼帧（第 2~9 帧）必须落在 0.08~0.15s —— 太快会像抽搐，太慢就没了咀嚼感
+    @Test func chewFramesAreInRange() {
         let chews = frames.dropFirst().dropLast()
         #expect(chews.count == 8)
         for frame in chews {
-            #expect(frame.duration >= 0.05, "\(frame.imageName) 时长 \(frame.duration) 短于 0.05s")
-            #expect(frame.duration <= 0.10, "\(frame.imageName) 时长 \(frame.duration) 长于 0.10s")
+            #expect(frame.duration >= 0.08, "\(frame.imageName) 时长 \(frame.duration) 短于 0.08s")
+            #expect(frame.duration <= 0.15, "\(frame.imageName) 时长 \(frame.duration) 长于 0.15s")
         }
     }
 
@@ -56,10 +56,10 @@ struct HamsterEatTimingTests {
         #expect(durations.last! < durations.first!)
     }
 
-    /// 整段时长 = 0.6 + 0.56 + 0.6 = 1.76s（totalDuration 必须与逐帧求和一致）
+    /// 整段时长 = 0.6 + 0.896 + 0.6 = 2.096s（totalDuration 必须与逐帧求和一致）
     @Test func totalDurationMatchesSumOfFrames() {
         let sum = frames.reduce(0) { $0 + $1.duration }
-        #expect(abs(sum - 1.76) < 0.001)
+        #expect(abs(sum - 2.096) < 0.001)
     }
 
     /// 其它动作仍走基础帧表，不应被 eat 的特例逻辑污染

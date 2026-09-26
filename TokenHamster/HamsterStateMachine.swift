@@ -112,7 +112,7 @@ final class HamsterStateMachine: ObservableObject {
 
     private static let frameRateConfig: [HamsterAction: TimeInterval] = [
         .idle:      0.25,   // 4 fps
-        .eat:       0.08,   // ~12 fps（仅作基准值；eat 走 makeFrames 里逐帧的咀嚼时间表）
+        .eat:       0.08,   // 仅作兜底基准值；eat 实际走 makeFrames 里逐帧的咀嚼时间表（0.144→0.080s）
         .sleep:     0.40,   // 2.5 fps（最慢）
         .sleepy:    0.40,   // 2.5 fps（打哈欠慢动作）
         .happy:     0.30,   // ~3.3 fps
@@ -242,15 +242,18 @@ final class HamsterStateMachine: ObservableObject {
             //   4 5 4 5     咀嚼：腮帮塞满后高频咀嚼（两轮开合）
             //   6           收势：吃完抬头，满足（定格读得清）
             //
-            // 咀嚼帧取自 0.09s → 0.05s 的**逐帧加速**（11~20 fps）：
+            // 咀嚼帧取自 0.144s → 0.080s 的**逐帧加速**（≈7~12.5 fps）：
             // 鼠类真实咀嚼约 5~10 Hz，一个开合 = 两帧，因此
-            //   第 1 轮 0.17s/次(≈5.9Hz) → 第 4 轮 0.11s/次(≈9Hz)
+            //   第 1 轮 0.272s/次(≈3.7Hz) → 第 4 轮 0.176s/次(≈5.7Hz)
             // 由「啃壳」到「塞满腮帮猛嚼」越来越急，避免匀速播放的机械感。
-            // 全程 0.6 + 0.56 + 0.6 = 1.76s。
+            // 全程 0.6 + 0.896 + 0.6 = 2.096s。
+            //
+            // 2026-09-25 二次调整：原先 0.09→0.05s 观感过快（像抽搐），
+            // 整体放慢 1.6 倍后 0.144→0.080s，节奏更接近真实啃咬。
             let chewImages = ["eat_2", "eat_3", "eat_2", "eat_3",
                               "eat_4", "eat_5", "eat_4", "eat_5"]
-            let chewDurations: [TimeInterval] = [0.09, 0.08, 0.08, 0.07,
-                                                 0.07, 0.06, 0.06, 0.05]
+            let chewDurations: [TimeInterval] = [0.144, 0.128, 0.128, 0.112,
+                                                 0.112, 0.096, 0.096, 0.080]
             var eatFrames: [Frame] = [Frame(imageName: "eat_1", duration: 0.60)]
             eatFrames += zip(chewImages, chewDurations).map { (name, duration) in
                 Frame(imageName: name, duration: duration)
