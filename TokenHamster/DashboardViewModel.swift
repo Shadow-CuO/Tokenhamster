@@ -472,6 +472,12 @@ class DashboardViewModel: ObservableObject {
     /// 可通过 init(storage:) 注入隔离存储（测试用），默认 Application Support。
     private let storage: AppStoring
 
+    /// ★ 小组件载荷的写入目录（widget 的沙箱容器）。
+    /// - 生产：`WidgetSnapshotStore.defaultDirectory`
+    /// - 测试宿主：默认 nil → 不写，免得把用户小组件的载荷换成 mock 数据；
+    ///   测试要验证这条接线时显式注入临时目录。
+    var widgetDirectory: URL? = WidgetSnapshotStore.defaultDirectory
+
     // ============================================================
     // MARK: - 初始化
     // ============================================================
@@ -1044,6 +1050,7 @@ class DashboardViewModel: ObservableObject {
             isRefreshing = false
             isLoading = false
             refreshProgress = 0
+            syncWidgetSnapshot()   // 全空/全停用 → 小组件回到空态
             scheduleCatchUpRefresh()
             return
         }
@@ -1209,6 +1216,9 @@ class DashboardViewModel: ObservableObject {
 
         isRefreshing = false
         isLoading = false
+
+        // ★ 快照已定型 → 同步给小组件（写完会要求 WidgetKit 刷新时间线）
+        syncWidgetSnapshot()
 
         // 刷新期间被吞掉的请求（如激活/取消激活触发的立即刷新）在此补跑
         scheduleCatchUpRefresh()
@@ -1423,16 +1433,17 @@ class DashboardViewModel: ObservableObject {
     }
 
     // ============================================================
-    // MARK: - Widget 数据写入（预留）
+    // MARK: - Widget 数据写入
     // ============================================================
 
-    /// ★ Widget 数据写入点（当前仅预留，后续 widget 开发时调用）。
-    /// 写入 App Group suite（与 Widget 的 WidgetStorage.suiteName 对齐）。
-    /// ⚠️ 真正被 Widget 读取需补 application-groups entitlement（后续阶段）。
-    func writeWidgetSnapshot(progress: Double, label: String) {
-        let shared = UserDefaults(suiteName: AppConstants.appGroupSuiteName)
-        shared?.set(progress, forKey: AppConstants.widgetProgressKey)
-        shared?.set(label, forKey: AppConstants.widgetLabelKey)
+    /// ★ 把当前额度快照写入 widget 的沙箱容器，供小组件读取（见 `WidgetBridge.swift`）。
+    /// 只在**刷新收尾**调用：每次 `agentSnapshots` 定型后写一份，
+    /// 停用/删除/全空这些分支也写（让小组件回到空态，而不是留着过期数据）。
+    private func syncWidgetSnapshot() {
+        WidgetSnapshotStore.write(
+            WidgetPayloadBuilder.build(from: agentSnapshots),
+            to: widgetDirectory
+        )
     }
 
     /// 保存 API 配置 —— ★ 存文件存储（Application Support），**不再用钥匙串**。

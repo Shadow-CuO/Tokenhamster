@@ -7,30 +7,38 @@
 //  ★ 为什么自带一张表：Widget 是独立 target（独立同步组），拿不到主 app 的
 //    `Localization.swift` / `LocalizationTable.swift`；这里只保留 Widget 用到的几条。
 //
-//  ★ 语言来源：App Group suite 的 `app_language`（主 app 写入同一份偏好）。
-//    ★ 实测（2026-09-25）：App 与 Widget **都未开沙箱**（见 entitlements）→
-//      `UserDefaults(suiteName: "group.…")` 落在
-//      `~/Library/Preferences/group.….plist`，**跨进程可读**（用 `defaults read` 验证过）。
-//      读不到时回退系统语言；日后若开启沙箱，需补 `application-groups` entitlement。
+//  ★★ 收词范围（用户决策 2026-09-26）：**只翻译「错误态 / 空态 / 组件描述」**三类。
+//    额度窗口标签（"5h" / "Week" / "Session" / "Weekly"）与重置时间**一律不翻译**，
+//    与主 App 额度卡片（裸 `Text(window.label)`）保持一致。
+//
+//  ★ 语言来源：widget **沙箱容器**里的 `WidgetLanguage.txt`（宿主 App 写入，
+//    见 `WidgetBridgeFiles.languageFileName` / `WidgetSnapshotStore.writeLanguage`）。
+//    ★ widget extension 在 macOS 上强制沙箱（未沙箱会被 `pkd` 拒绝注册），
+//      读不到宿主那边的 `UserDefaults(suiteName:)` —— 所以偏好也走文件。
+//      文件缺失 → 回退系统首选语言。
+//
+//  ⚠️ 本表里的 key 必须与源码里 `L("…")` 的字面量逐字一致，否则
+//    `LocalizationTableIntegrityTests.widgetKeysHaveChineseTranslation` 会失败。
 //
 
 import Foundation
 
 enum WidgetL10n {
 
-    /// 与主 app `Localization.languageKey` 保持一致
-    static let languageKey = "app_language"
-
     /// key = 英文原文（与主 app 的 key 逐字一致，便于对照维护）
     private static let zh: [String: String] = [
-        "Today's token quota": "今日 Token 额度",
-        "Used": "已使用",
-        "Shows token usage progress": "显示 Token 使用进度",
+        // ---- 错误态 ----
+        "Update failed": "更新失败",
+        // ---- 空态 ----
+        "Open TokenHamster to add a data source": "打开 TokenHamster 添加数据源",
+        // ---- 组件描述（编辑面板 / 组件画廊）----
+        "Shows one data source's quota": "显示单个数据源的额度",
+        "Shows two data sources side by side": "并排显示两个数据源的额度",
     ]
 
-    /// 是否用中文
+    /// 是否用中文。偏好取值：`"zh-Hans"` / `"en"` / `"system"`（缺失 → 系统语言）。
     static var isChinese: Bool {
-        if let raw = WidgetStorage.shared?.string(forKey: languageKey) {
+        if let raw = WidgetPayloadStore.readLanguageRawValue() {
             if raw.hasPrefix("zh") { return true }
             if raw == "en" { return false }
             // "system" 或未知 → 落到系统判断

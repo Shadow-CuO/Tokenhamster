@@ -107,9 +107,13 @@ enum AppConstants {
     /// 官方 model-usage 只能查 30 天，热力图靠这份累积历史延长。
     nonisolated static let zaiUsageHistoryKey = "zai_usage_history"
 
-    // ---- Widget 共享 key（预留写入点） ----
-    nonisolated static let widgetProgressKey = "widget_progress"
-    nonisolated static let widgetLabelKey = "widget_label"
+    // ---- Widget 共享 ----
+    /// ★ 小组件数据**不走 UserDefaults key**，而是写成文件放进 widget 的沙箱容器：
+    ///   路径与文件名见 `WidgetBridgeFiles`。
+    ///   原因：macOS 的 widget extension 强制沙箱（未沙箱会被 `pkd` 拒绝注册），
+    ///   而沙箱进程读不到 App 这边的 `~/Library/Preferences/group.<id>.plist`。
+    ///   历史遗留：`widget_progress` / `widget_label`（第一版假数据）与
+    ///   `widget_quota_payload`（曾走过 App Group suite 的第二版）均已废弃。
 
     // ---- 外部支持链接 ----
 

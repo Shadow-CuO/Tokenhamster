@@ -241,11 +241,14 @@ final class AppSettingsStore: ObservableObject {
         syncToSharedDefaults()
     }
 
-    /// 写入 App Group（Widget 读同一份偏好）。
-    /// ★ 两个进程都未开沙箱 → suite 落在 `~/Library/Preferences/group.<id>.plist`，跨进程可读
-    ///   （实测）；若日后开启沙箱，补 `application-groups` entitlement 即可继续生效。
+    /// 写入 App Group（兼容旧的共享途径）+ widget 沙箱容器里的语言文件。
+    /// ★ 两个进程**都未开沙箱**的假设已作废：widget extension 因 `pkd` 要求必须沙箱
+    ///   （见 `WidgetBridge.swift` 顶部说明），读不到 suite plist ——
+    ///   所以真正生效的是后面那个文件（`WidgetSnapshotStore.writeLanguage`）。
+    ///   suite 写入保留：无害，且 `LocalizationTests` 依赖这条链路的键名。
     private func syncToSharedDefaults() {
         sharedDefaults?.set(language.rawValue, forKey: Localization.languageKey)
         sharedDefaults?.set(currency.rawValue, forKey: Localization.currencyKey)
+        WidgetSnapshotStore.writeLanguage(language.rawValue)
     }
 }
