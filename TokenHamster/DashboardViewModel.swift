@@ -2,7 +2,7 @@
 //  DashboardViewModel.swift
 //  TokenHamster
 //
-//  Created by 孙亦阳 on 2026/7/14.
+//  Created by Oscar Sun on 2026/7/14.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  TokenHamster
 //
-//  Created by 孙亦阳 on 2026/7/16.
+//  Created by Oscar Sun on 2026/7/16.
 //
 //  设置面板（数据源管理已迁移至各栏目管理页 DataSourceManagementView）
 

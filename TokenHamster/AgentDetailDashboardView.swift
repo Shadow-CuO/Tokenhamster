@@ -2,7 +2,7 @@
 //  AgentDetailDashboardView.swift
 //  TokenHamster
 //
-//  Created by 孙亦阳 on 2026/7/16.
+//  Created by Oscar Sun on 2026/7/16.
 //
 //  二级详情页：点击 AGENTS 卡片进入，展示单个数据源的
 //  额度 / 模型排行 / 7 日趋势 / 活动热力图（数据随轮询自动更新）

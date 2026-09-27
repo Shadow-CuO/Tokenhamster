@@ -2,7 +2,7 @@
 //  DataSourceManagementView.swift
 //  TokenHamster
 //
-//  Created by 孙亦阳 on 2026/8/20.
+//  Created by Oscar Sun on 2026/8/20.
 //
 //  栏目管理页（通用组件）：承载某一栏目的数据源增删改。
 //   - 额度管理页：订阅/本地 CLI 源（agentPresets）

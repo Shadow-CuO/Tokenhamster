@@ -2,7 +2,7 @@
 //  Storage/AppStorage.swift
 //  TokenHamster
 //
-//  Created by 孙亦阳 on 2026/8/9.
+//  Created by Oscar Sun on 2026/8/9.
 //
 //  数据存储抽象层 — Application Support 文件存储。
 //  存放非敏感、会增长的用量数据（每日消耗 / Dashboard 快照），

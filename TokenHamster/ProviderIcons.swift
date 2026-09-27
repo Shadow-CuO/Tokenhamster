@@ -2,7 +2,7 @@
 //  ProviderIcons.swift
 //  TokenHamster
 //
-//  Created by 孙亦阳 on 2026/8/10.
+//  Created by Oscar Sun on 2026/8/10.
 //
 //  AI 厂商品牌图标 — 资源图优先（ProviderIcons/ 目录），SF Symbol 兜底。
 //  ProviderIcons/ 下的 png 随 App 打包（扁平复制到 Resources 根目录），

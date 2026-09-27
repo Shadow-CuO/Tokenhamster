@@ -2,7 +2,7 @@
 //  DashboardView.swift
 //  TokenHamster
 //
-//  Created by 孙亦阳 on 2026/7/13.
+//  Created by Oscar Sun on 2026/7/13.
 //
 //  所有颜色/字号/间距均来自 DashboardAppearance（自适应暗/亮模式）
 

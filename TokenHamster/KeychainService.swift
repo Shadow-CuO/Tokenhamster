@@ -2,7 +2,7 @@
 //  KeychainService.swift
 //  TokenHamster
 //
-//  Created by 孙亦阳 on 2026/7/16.
+//  Created by Oscar Sun on 2026/7/16.
 //
 //  安全存储：使用 macOS Keychain 加密保管 API 配置 & Key
 //  替代 UserDefaults / iCloud KVS 明文存储
