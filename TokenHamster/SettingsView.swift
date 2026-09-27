@@ -84,15 +84,10 @@ struct SettingsView: View {
     private var languageSection: some View {
         VStack(alignment: .leading, spacing: 6) {
             sectionHeader(icon: "globe", title: L("Language"))
-            pickerCard {
-                Picker("", selection: languageBinding) {
-                    ForEach(AppLanguage.allCases) { language in
-                        Text(language.displayName).tag(language)
-                    }
+            menuRow(title: settingsStore.language.displayName, selection: languageBinding) {
+                ForEach(AppLanguage.allCases) { language in
+                    Text(language.displayName).tag(language)
                 }
-                .labelsHidden()
-                .pickerStyle(.menu)
-                .tint(a.accent)
             }
         }
     }
@@ -118,15 +113,10 @@ struct SettingsView: View {
     private var unitsSection: some View {
         VStack(alignment: .leading, spacing: 6) {
             sectionHeader(icon: "dollarsign.circle", title: L("Units"))
-            pickerCard {
-                Picker("", selection: currencyBinding) {
-                    ForEach(CurrencyPreference.allCases) { currency in
-                        Text(currency.displayName).tag(currency)
-                    }
+            menuRow(title: settingsStore.currency.displayName, selection: currencyBinding) {
+                ForEach(CurrencyPreference.allCases) { currency in
+                    Text(currency.displayName).tag(currency)
                 }
-                .labelsHidden()
-                .pickerStyle(.menu)
-                .tint(a.accent)
             }
         }
     }
@@ -143,19 +133,50 @@ struct SettingsView: View {
     // MARK: - 公共
     // ============================================================
 
-    private func pickerCard<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        HStack(spacing: 8) {
-            content()
-            Spacer(minLength: 0)
+    /// 设置页下拉行 —— **卡片本身就是菜单按钮**。
+    ///
+    /// ★ 为什么不用 `Picker(.menu)` 直接塞进卡片（2026-09-27 修）：
+    ///   macOS 26 下 `.menu` 样式的 Picker 会**自己画一层圆角浮起底 + 内描边**
+    ///   （AppKit 的 pop-up button bezel）。它落在这张卡片的 `pillSelectedBg` 圆角矩形上，
+    ///   就成了两个错位的圆角框叠在一起 —— 即“选项框有叠层”。
+    ///   试过 `.buttonStyle(.plain)` 去掉 bezel：确实不叠了，但**右侧指示器（上下箭头）也一起消失**，
+    ///   看不出是下拉，故不可取。
+    ///   最终改用 `Menu` + 自绘 label：卡片即按钮，值左对齐、指示器右对齐，
+    ///   `Picker` 放进 `Menu` 里由系统渲染成带勾选的菜单项。
+    private func menuRow<Value: Hashable>(
+        title: String,
+        selection: Binding<Value>,
+        @ViewBuilder options: () -> some View
+    ) -> some View {
+        Menu {
+            Picker("", selection: selection) {
+                options()
+            }
+            .pickerStyle(.inline)
+            .labelsHidden()
+        } label: {
+            HStack(spacing: 8) {
+                Text(title)
+                    .foregroundStyle(a.textPrimary)
+                Spacer(minLength: 0)
+                Image(systemName: "chevron.up.chevron.down")
+                    .font(.system(size: 10, weight: .semibold))
+                    .foregroundStyle(a.textHeading)
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 6)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 10, style: .continuous).fill(a.pillSelectedBg)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(a.cardStroke, lineWidth: 1)
+            )
+            .contentShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 4)
-        .background(
-            RoundedRectangle(cornerRadius: 10, style: .continuous).fill(a.pillSelectedBg)
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(a.cardStroke, lineWidth: 1)
-        )
+        .menuStyle(.button)
+        .buttonStyle(.plain)
+        .menuIndicator(.hidden)
     }
 
     private func sectionHeader(icon: String, title: String) -> some View {
