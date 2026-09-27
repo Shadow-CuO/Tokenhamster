@@ -13,20 +13,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7682CED03005015C00957FA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7682CEBA3005015A00957FA2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7682CEC13005015A00957FA2;
-			remoteInfo = TokenHamster;
-		};
-		7682CEDA3005015C00957FA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7682CEBA3005015A00957FA2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7682CEC13005015A00957FA2;
-			remoteInfo = TokenHamster;
-		};
 		76AC00073005051500443404 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7682CEBA3005015A00957FA2 /* Project object */;
@@ -52,8 +38,6 @@
 
 /* Begin PBXFileReference section */
 		7682CEC23005015A00957FA2 /* TokenHamster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenHamster.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7682CECF3005015C00957FA2 /* TokenHamsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokenHamsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7682CED93005015C00957FA2 /* TokenHamsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokenHamsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ACFFB03005042100443404 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		76ACFFB23005042100443404 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		76ACFFFA3005051300443404 /* TokenHamsterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TokenHamsterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,16 +59,6 @@
 			path = TokenHamster;
 			sourceTree = "<group>";
 		};
-		7682CED23005015C00957FA2 /* TokenHamsterTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TokenHamsterTests;
-			sourceTree = "<group>";
-		};
-		7682CEDC3005015C00957FA2 /* TokenHamsterUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TokenHamsterUITests;
-			sourceTree = "<group>";
-		};
 		76ACFFFD3005051300443404 /* TokenHamsterWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -97,20 +71,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		7682CEBF3005015A00957FA2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7682CECC3005015C00957FA2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7682CED63005015C00957FA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				7682CEC43005015A00957FA2 /* TokenHamster */,
-				7682CED23005015C00957FA2 /* TokenHamsterTests */,
-				7682CEDC3005015C00957FA2 /* TokenHamsterUITests */,
 				76ACFFFD3005051300443404 /* TokenHamsterWidget */,
 				76ACFFAF3005042100443404 /* Frameworks */,
 				7682CEC33005015A00957FA2 /* Products */,
@@ -145,8 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				7682CEC23005015A00957FA2 /* TokenHamster.app */,
-				7682CECF3005015C00957FA2 /* TokenHamsterTests.xctest */,
-				7682CED93005015C00957FA2 /* TokenHamsterUITests.xctest */,
 				76ACFFFA3005051300443404 /* TokenHamsterWidgetExtension.appex */,
 			);
 			name = Products;
@@ -188,52 +144,6 @@
 			productReference = 7682CEC23005015A00957FA2 /* TokenHamster.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7682CECE3005015C00957FA2 /* TokenHamsterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7682CEE63005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamsterTests" */;
-			buildPhases = (
-				7682CECB3005015C00957FA2 /* Sources */,
-				7682CECC3005015C00957FA2 /* Frameworks */,
-				7682CECD3005015C00957FA2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7682CED13005015C00957FA2 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7682CED23005015C00957FA2 /* TokenHamsterTests */,
-			);
-			name = TokenHamsterTests;
-			packageProductDependencies = (
-			);
-			productName = TokenHamsterTests;
-			productReference = 7682CECF3005015C00957FA2 /* TokenHamsterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7682CED83005015C00957FA2 /* TokenHamsterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7682CEE93005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamsterUITests" */;
-			buildPhases = (
-				7682CED53005015C00957FA2 /* Sources */,
-				7682CED63005015C00957FA2 /* Frameworks */,
-				7682CED73005015C00957FA2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7682CEDB3005015C00957FA2 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7682CEDC3005015C00957FA2 /* TokenHamsterUITests */,
-			);
-			name = TokenHamsterUITests;
-			packageProductDependencies = (
-			);
-			productName = TokenHamsterUITests;
-			productReference = 7682CED93005015C00957FA2 /* TokenHamsterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		76ACFFF93005051300443404 /* TokenHamsterWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76AC000B3005051500443404 /* Build configuration list for PBXNativeTarget "TokenHamsterWidgetExtension" */;
@@ -269,14 +179,6 @@
 					7682CEC13005015A00957FA2 = {
 						CreatedOnToolsVersion = 26.6;
 					};
-					7682CECE3005015C00957FA2 = {
-						CreatedOnToolsVersion = 26.6;
-						TestTargetID = 7682CEC13005015A00957FA2;
-					};
-					7682CED83005015C00957FA2 = {
-						CreatedOnToolsVersion = 26.6;
-						TestTargetID = 7682CEC13005015A00957FA2;
-					};
 					76ACFFF93005051300443404 = {
 						CreatedOnToolsVersion = 26.6;
 					};
@@ -297,8 +199,6 @@
 			projectRoot = "";
 			targets = (
 				7682CEC13005015A00957FA2 /* TokenHamster */,
-				7682CECE3005015C00957FA2 /* TokenHamsterTests */,
-				7682CED83005015C00957FA2 /* TokenHamsterUITests */,
 				76ACFFF93005051300443404 /* TokenHamsterWidgetExtension */,
 			);
 		};
@@ -306,20 +206,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		7682CEC03005015A00957FA2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7682CECD3005015C00957FA2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7682CED73005015C00957FA2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,20 +229,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7682CECB3005015C00957FA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7682CED53005015C00957FA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		76ACFFF63005051300443404 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,16 +239,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7682CED13005015C00957FA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7682CEC13005015A00957FA2 /* TokenHamster */;
-			targetProxy = 7682CED03005015C00957FA2 /* PBXContainerItemProxy */;
-		};
-		7682CEDB3005015C00957FA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7682CEC13005015A00957FA2 /* TokenHamster */;
-			targetProxy = 7682CEDA3005015C00957FA2 /* PBXContainerItemProxy */;
-		};
 		76AC00083005051500443404 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 76ACFFF93005051300443404 /* TokenHamsterWidgetExtension */;
@@ -571,86 +433,6 @@
 			};
 			name = Release;
 		};
-		7682CEE73005015C00957FA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BJJC82CK65;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamsterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TokenHamster.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TokenHamster";
-			};
-			name = Debug;
-		};
-		7682CEE83005015C00957FA2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BJJC82CK65;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamsterTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TokenHamster.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TokenHamster";
-			};
-			name = Release;
-		};
-		7682CEEA3005015C00957FA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BJJC82CK65;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamsterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = TokenHamster;
-			};
-			name = Debug;
-		};
-		7682CEEB3005015C00957FA2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BJJC82CK65;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.YiyangSun.TokenHamsterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = TokenHamster;
-			};
-			name = Release;
-		};
 		76AC000C3005051500443404 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -732,24 +514,6 @@
 			buildConfigurations = (
 				7682CEE43005015C00957FA2 /* Debug */,
 				7682CEE53005015C00957FA2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7682CEE63005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamsterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7682CEE73005015C00957FA2 /* Debug */,
-				7682CEE83005015C00957FA2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7682CEE93005015C00957FA2 /* Build configuration list for PBXNativeTarget "TokenHamsterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7682CEEA3005015C00957FA2 /* Debug */,
-				7682CEEB3005015C00957FA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

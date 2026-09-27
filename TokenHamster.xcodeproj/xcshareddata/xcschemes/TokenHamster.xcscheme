@@ -29,30 +29,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7682CECE3005015C00957FA2"
-               BuildableName = "TokenHamsterTests.xctest"
-               BlueprintName = "TokenHamsterTests"
-               ReferencedContainer = "container:TokenHamster.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7682CED83005015C00957FA2"
-               BuildableName = "TokenHamsterUITests.xctest"
-               BlueprintName = "TokenHamsterUITests"
-               ReferencedContainer = "container:TokenHamster.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
